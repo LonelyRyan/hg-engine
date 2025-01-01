@@ -141,7 +141,7 @@ TOOLS += $(ARMIPS)
 $(ADPCMXQ):
 ifeq (,$(wildcard $(ADPCMXQ)))
 	rm -r -f tools/source/adpcm-xq
-	cd tools/source ; git clone https://github.com/dbry/adpcm-xq.git
+	cd tools/source ; git clone https://gitee.com/LonelyRyan-lazy/adpcm-xq.git
 	cd tools/source/adpcm-xq ; gcc -O2 *.c -o adpcm-xq -lm
 	mv tools/source/adpcm-xq/adpcm-xq $(ADPCMXQ)
 	rm -r -f tools/source/adpcm-xq
@@ -152,7 +152,7 @@ TOOLS += $(ADPCMXQ)
 tools/ntrWavTool.py:
 ifeq (,$(wildcard tools/ntrWavTool.py))
 	rm -r -f tools/source/ntrWavTool
-	cd tools/source ; git clone https://github.com/turtleisaac/ntrWavTool.git
+	cd tools/source ; git clone https://gitee.com/LonelyRyan-lazy/ntr-wav-tool.git
 	mv tools/source/ntrWavTool/ntrWavTool.py tools/ntrWavTool.py
 	rm -r -f tools/source/ntrWavTool
 endif
