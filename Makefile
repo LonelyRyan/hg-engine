@@ -153,7 +153,7 @@ TOOLS += $(SWAV2SWAR_EXE)
 $(NDSTOOL):
 ifeq (,$(wildcard $(NDSTOOL)))
 	rm -r -f tools/source/ndstool
-	cd tools/source ; git clone https://github.com/devkitPro/ndstool.git
+	cd tools/source ; git clone https://gitee.com/LonelyRyan-lazy/ndstool.git
 	cd tools/source/ndstool ; git checkout fa6b6d01881363eb2cd6e31d794f51440791f336
 	cd tools/source/ndstool ; find . -name '*.sh' -execdir chmod +x {} \;
 	cd tools/source/ndstool ; ./autogen.sh
@@ -167,7 +167,7 @@ TOOLS += $(NDSTOOL)
 $(ARMIPS):
 ifeq (,$(wildcard $(ARMIPS)))
 	rm -r -f tools/source/armips
-	cd tools/source ; git clone --recursive https://github.com/BluRosie/armips.git
+	cd tools/source ; git clone --recursive https://gitee.com/LonelyRyan-lazy/armips.git
 	#cd tools/source ; cp -r ~/git/armips armips
 	cd tools/source/armips ; mkdir build
 	cd tools/source/armips/build ; cmake -DCMAKE_BUILD_TYPE=Release ..
@@ -181,7 +181,7 @@ TOOLS += $(ARMIPS)
 $(ADPCMXQ):
 ifeq (,$(wildcard $(ADPCMXQ)))
 	rm -r -f tools/source/adpcm-xq
-	cd tools/source ; git clone https://github.com/dbry/adpcm-xq.git
+	cd tools/source ; git clone https://gitee.com/LonelyRyan-lazy/adpcm-xq.git
 	cd tools/source/adpcm-xq ; gcc -O2 *.c -o adpcm-xq -lm
 	mv tools/source/adpcm-xq/adpcm-xq $(ADPCMXQ)
 	rm -r -f tools/source/adpcm-xq
@@ -192,7 +192,7 @@ TOOLS += $(ADPCMXQ)
 tools/ntrWavTool.py:
 ifeq (,$(wildcard tools/ntrWavTool.py))
 	rm -r -f tools/source/ntrWavTool
-	cd tools/source ; git clone https://github.com/turtleisaac/ntrWavTool.git
+	cd tools/source ; git clone https://gitee.com/LonelyRyan-lazy/ntrWavTool.git
 	mv tools/source/ntrWavTool/ntrWavTool.py tools/ntrWavTool.py
 	rm -r -f tools/source/ntrWavTool
 endif
